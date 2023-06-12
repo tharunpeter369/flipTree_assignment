@@ -12,14 +12,23 @@ const activitySchema = new mongoose.Schema(
       ref: "Profile", // Reference the User collection
     },
     connection_request: {
-      type: ["String"],
+      type: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Profile", // Reference the Profile collection
+        },
+      ],
       default: [],
     },
     //groom || bride
     short_listed: {
-      type: ["String"],
+      type: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Profile", // Reference the Profile collection
+        },
+      ],
       default: [],
-      // required: true,
     },
     recently_viewed: {
       type: ["String"],
