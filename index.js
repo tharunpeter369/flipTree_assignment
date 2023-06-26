@@ -28,6 +28,7 @@ app.use(authenticateJWT);
 app.use('/api/profile', lumiProfileRouter)
 app.use('/api/activity', lumiActivityRouter)
 
+
 //starting server
 app.listen(port, () => {
     console.log(`backend server is running on port ${port}`);
